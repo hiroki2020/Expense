@@ -1,14 +1,75 @@
 .question {
-  cursor: pointer;
   position: absolute;
   z-index: 1000;
-  top: 320px;
-  right: 430px;
+  top: 270px;
+  right: 470px;
   background-color: skyblue;
   color: white; 
   padding: 10px;
   border-radius: 5px;
   z-index: 1;
+  font-size: 30px;
+}
+#register{
+  color: black;
+  padding: 5px;
+  font-size: 22px;
+}
+#btn {
+  cursor: pointer;
+  background-color: #EEEEEE;
+  border-radius: 8px;
+  padding: 10.5px;
+  position: absolute;
+  top: 0;
+  margin-left: 5px;
+}
+.total {
+  position: absolute;
+  bottom: 200px;
+  left: 452px;
+  font-size: 30px;
+  background-color: white;
+  color: black;
+  border-radius: 5px; 
+  padding: 5px;
+}
+#push {
+  font-size: 20px;
+  color: white;
+  padding: 5px;
+}
+#hide {
+  padding: 10px;
+  position: absolute;
+  background-color: blue;
+  border-radius: 10px;
+  top: 0px;
+  cursor: pointer;
+}
+#amount {
+  font-size: 60px;
+  margin-top: 20px;
+  margin-left: 15px;
+  color: gray;
+  padding-right: 10px;
+}
+.back {
+  background-color: #DDFFFF;
+  height: 100vh; 
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: skyblue;
+  border-radius: 2px;
+  padding: 6px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 100;
 }
 
 .drag {
@@ -39,6 +100,18 @@
   z-index: 2;
 }
 
+.modal2 {
+  position: absolute;
+  top: 32%;
+  left: 35%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  z-index: 2;
+}
 .fa-times {
   position: absolute;
   top: 12px;
@@ -70,7 +143,6 @@
   display: inline-block;
   padding: 14px 140px;
   background-color: skyblue;
-  border: none;
   border-radius: 3px;
   color: white;
   margin: 10px auto;

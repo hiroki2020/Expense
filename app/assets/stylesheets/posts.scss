@@ -1,11 +1,25 @@
 /* posts/index ================================ */
+.main {
+  position: absolute;
+  top: 50px;
+  width: 80%;
+  left: 140px;
+}
 .flash {
-  background-color: skyblue;
+  background-color: blue;
   text-align: center;
   font-size: 15px;
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  color: white;
+  z-index: 10;
 }
 .container {
   display: flex;
+  height: 700px;
+  overflow: scroll;
+  border: 1px solid gray;
   &__left {
     flex: auto;
   }
