@@ -12,4 +12,5 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
     flash[:complete] = '記録しました。'
   end
+
 end
