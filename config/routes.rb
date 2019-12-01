@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   get '/' => "home#top"
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
-  get "login" => "users#login_form"
+  get "index" => "posts#index"
+  get "posts/:id/edit" => "posts#edit"
+  post "posts/:id/update" => "posts#update"
 end
