@@ -1,4 +1,4 @@
-<div class="drag-and-drop" id="login-show">
+<div class="question" id="login-show">
   <h1>あなたは今日何にいくら使いましたか？</h1>
 </div>
 <p>Find me in app/views/home/top.html.erb</p>
@@ -7,13 +7,15 @@
     <div class="close-modal">
       <i class="fa fa-2x fa-times"></i>
     </div>
-    <div id="login-form">
-      <h2>記録する</h2>
-      <form action="#">
-        <input class="form-control" type="text" id="test1" placeholder="項目">
-        <input class="form-control" type="number" placeholder="金額">
-        <div id="submit-btn">記録</div>
+    <%= form_tag("/posts/create") do %>
+      <div id="login-form">
+        <h2>記録する</h2>
+        <form action="#">
+          <input class="form-control" type="text" name="content" id="test1" placeholder="項目">
+          <input class="form-control" type="number" name="amount" placeholder="金額">
+          <input type="submit" value="記録" id="submit-btn">
       </form>
+    <% end %>
     </div>
   </div>
 </div>
