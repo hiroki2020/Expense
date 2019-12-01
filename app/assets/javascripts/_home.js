@@ -20,10 +20,14 @@ $(function() {
 
     $('#hide').prop('disabled', false);
     $('#login-show').prop('disabled', false);
-    
+
   });
 
+  
+
 });
+
+
 
 
 
