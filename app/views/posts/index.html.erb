@@ -1,44 +1,37 @@
-<div class="flash">
-  <%= flash[:complete] %>  
-</div>
-
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-
-
-<header>
-  <div class="header-logo">
-    <a href="/">Top</a>
-  </div>
-  <ul class="header-menus">
-    <li>
-      <a href="/about">TweetAppとは</a>
-    </li>
-  </ul>
-</header>
-
-<div class="main posts-index">
-  <div class="container">
-    <div class="container__left">
-      <% @posts.each do |post|%>
-        <div class="posts-index-item">
-          <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[Time.now.wday]})") %>
+<div class="back">
+  <header>
+    <ul class="header-menus">
+      <div class="header-logo">
+        <a href="/">Top</a>
+      </div>
+    </ul>
+  </header>
+    <div class="main posts-index">
+      <div class="container">
+        <div class="container__left">
+          <% @posts.each do |post|%>
+            <div class="posts-index-item">
+              <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[Time.now.wday]})") %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
-    </div>
-    <div class="container__center">
-      <% @posts.each do |post|%>
-        <div class="posts-index-item">
-          <%= post.content %>
+        <div class="container__center">
+          <% @posts.each do |post|%>
+            <div class="posts-index-item">
+              <%= post.content %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
-    </div>
-    <div class="container__right">
-      <% @posts.each do |post|%>
-        <div class="posts-index-item">
-          <%= post.amount %>円
+        <div class="container__right">
+          <% @posts.each do |post|%>
+            <div class="posts-index-item">
+              <%= post.amount %>円
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
-  </div>
+    <div class="flash">
+      <%= flash[:complete] %>  
+    </div>
 </div>
