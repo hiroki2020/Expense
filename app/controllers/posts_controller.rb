@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def new
@@ -11,6 +11,14 @@ class PostsController < ApplicationController
     @post.save
     redirect_to("/posts/index")
     flash[:complete] = '記録しました。'
+  end
+
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update
+    redirect_to("/posts/index")
   end
 
 end
