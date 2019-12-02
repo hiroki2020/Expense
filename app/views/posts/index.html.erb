@@ -25,7 +25,7 @@
         <div class="container__right">
           <% @posts.each do |post|%>
             <div class="posts-index-item">
-              <%= post.amount %>円
+              <%= post.amount.to_s(:delimited) %>円
             </div>
           <% end %>
         </div>
