@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  def top
+  def total
     @total = Post.all.sum(:amount)
   end
 end
