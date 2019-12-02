@@ -11,7 +11,7 @@
         <div class="container__left">
           <% @posts.each do |post|%>
             <div class="posts-index-item">
-              <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[Time.now.wday]})") %>
+              <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[post.created_at.wday]})") %>
             </div>
           <% end %>
         </div>
