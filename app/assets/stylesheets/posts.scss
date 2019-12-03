@@ -1,4 +1,18 @@
 /* posts/index ================================ */
+.scroll_arrow {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 170px;
+  bottom: 100px;
+  background-color: #888;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  color: #ddd;
+  font-size: 20px;
+}
+
 .main {
   position: absolute;
   top: 50px;
