@@ -1,24 +1,7 @@
-# README
+# What is this?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+If you use this app, you can register your daily expense more simpler.
 
-Things you may want to cover:
+# How can I setup?
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
