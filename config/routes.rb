@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get "index" => "posts#index"
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
+  
+  resources :posts, only: [:destroy]
 end

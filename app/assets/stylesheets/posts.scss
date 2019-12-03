@@ -1,4 +1,25 @@
 /* posts/index ================================ */
+.destroy {
+  position: absolute;
+  top: 5px;
+  width: 50px;
+  height: 100px;
+  right: 0px;
+}
+.scroll_arrow {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 170px;
+  bottom: 100px;
+  background-color: #888;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  color: #ddd;
+  font-size: 20px;
+}
+
 .main {
   position: absolute;
   top: 50px;
@@ -29,6 +50,7 @@
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
+  position: relative;
 }
 
 .post-left img {
