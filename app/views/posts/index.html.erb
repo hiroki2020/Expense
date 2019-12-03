@@ -11,24 +11,16 @@
         <div class="container__left">
           <% @posts.each do |post|%>
             <div class="posts-index-item">
+              <p class="">
               <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[post.created_at.wday]})") %>
-            </div>
-          <% end %>
-        </div>
-        <div class="container__center">
-          <% @posts.each do |post|%>
-            <div class="posts-index-item">
+              </p>
+              <p>
               <%= post.content %>
-            </div>
-          <% end %>
-        </div>
-        <div class="container__right">
-          <% @posts.each do |post|%>
-            <div class="posts-index-item">
+              </p>
               <%= post.amount.to_s(:delimited) %>円
             </div>
           <% end %>
-        </div>
+        </div>    
       </div>
     </div>
     <div class="flash">
