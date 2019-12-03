@@ -1,4 +1,11 @@
 /* posts/index ================================ */
+.destroy {
+  position: absolute;
+  top: 5px;
+  width: 50px;
+  height: 100px;
+  right: 0px;
+}
 .scroll_arrow {
   height: 50px;
   width: 50px;
@@ -43,6 +50,7 @@
   background-color: white;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
+  position: relative;
 }
 
 .post-left img {

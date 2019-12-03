@@ -21,4 +21,9 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
+  def destroy
+    post = Post.all.order("created_at DESC").find(params[:id])
+    post.destroy
+  end
+
 end

@@ -11,15 +11,21 @@
         <div class="container__contents">
           <% @posts.each do |post|%>
             <div class="posts-index-item">
+              <p class="destroy">
+                <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
+              </p>
               <p class="">
-              <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[post.created_at.wday]})") %>
+                <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[post.created_at.wday]})") %>
               </p>
               <p>
-              <%= post.content %>
+                <%= post.content %>
               </p>
-              <%= post.amount.to_s(:delimited) %>円
+              <p>
+                <%= post.amount.to_s(:delimited) %>円
+              </p>
             </div>
           <% end %>
+          
         </div>
         <div class="scroll_arrow">
           <i class="fa fa-arrow-up" aria-hidden="true"></i>
@@ -30,3 +36,4 @@
       <%= flash[:complete] %>  
     </div>
 </div>
+   
