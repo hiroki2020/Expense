@@ -8,7 +8,7 @@
   </header>
     <div class="main posts-index">
       <div class="container">
-        <div class="container__left">
+        <div class="container__contents">
           <% @posts.each do |post|%>
             <div class="posts-index-item">
               <p class="">
@@ -20,6 +20,9 @@
               <%= post.amount.to_s(:delimited) %>円
             </div>
           <% end %>
+        </div>
+        <div class="scroll_arrow">
+          <i class="fa fa-arrow-up" aria-hidden="true"></i>
         </div>    
       </div>
     </div>
