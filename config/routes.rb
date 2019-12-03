@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get 'posts/index'
 
-  get '/' => "home#total"
+  get '/' => "home#top"
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"
   get "index" => "posts#index"
