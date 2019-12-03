@@ -23,7 +23,11 @@ $(function() {
 
   });
 
-  
+  $(".main").on("mouseover", ".posts-index-item", function(){
+    $(this).css({"background-color": "#F1940B", "font-weight": "bold"});
+  }).on("mouseout", ".posts-index-item", function(){
+    $(this).css({"background-color": "#FFFFFF", "font-weight": "normal"});
+  })
 
 });
 
