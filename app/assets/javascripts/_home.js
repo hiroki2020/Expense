@@ -29,6 +29,12 @@ $(function() {
     $(this).css({"background-color": "#FFFFFF", "font-weight": "normal"});
   })
 
+  //スクロール
+  $(".scroll_arrow").on("click", function(){
+    $(".container").animate({scrollTop:0}, 300, "swing");
+    return false;
+  });
+
 });
 
 
