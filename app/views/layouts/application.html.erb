@@ -10,7 +10,20 @@
   </head>
 
   <body>
-    <%# <%= link_to "ログイン", %> 
+    <header>
+        <div class="header-left"> 
+          <%= link_to "詳細ページ","/index", id: "link" %>
+          <%= link_to "Top", root_path, id: "link" %>
+        </div>
+        <div class="header-right">
+          <%= link_to "ユーザー一覧", "/user_progates/index", id: "link"%>
+        </div>
+    
+        <div class="header-right">
+          <%= link_to "新規登録", "/signup", id: "link"%>
+        </div>
+     
+    </header>
     <%= yield %>
   </body>
 </html>
