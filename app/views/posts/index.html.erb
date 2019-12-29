@@ -1,18 +1,11 @@
 <div class="back">
-  <header>
-    <ul class="header-menus">
-      <div class="header-logo">
-        <a href="/">Top</a>
-      </div>
-    </ul>
-  </header>
     <div class="main posts-index">
       <div class="container">
         <div class="container__contents">
           <% @posts.each do |post|%>
             <div class="posts-index-item">
               <p class="destroy">
-                <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
+                <%= link_to '削除', "/posts/#{post.id}", method: :delete, id: "link" %>
               </p>
               <p class="">
                 <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[post.created_at.wday]})") %>
