@@ -14,3 +14,16 @@
  *= require_self
  */
  @import "./reset";
+ header {
+   height: 100px;
+   background-color: royalblue;
+  //  display: flex;
+   .header-left {
+     float: left;
+     margin: 10px 0 0 10px;
+   }
+   .header-right {
+     float: right;
+     margin: 10px 10px 0 0;
+   }
+ }
