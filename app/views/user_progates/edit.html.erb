@@ -1,0 +1,16 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading">ユーザー情報の編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+      <%= form_tag("/user_progates/#{@user.id}/update") do %>
+        <p>ユーザー名</p>
+        <input value="<%= @user.name %>" name="user_name">
+        <p>メールアドレス</p>
+        <input value="<%= @user.email %>" name="user_email">
+        <input type="submit" value="保存">
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
