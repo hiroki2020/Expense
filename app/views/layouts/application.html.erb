@@ -11,19 +11,48 @@
 
   <body>
     <header>
-        <div class="header-left"> 
-          <%= link_to "詳細ページ","/index", id: "link" %>
-          <%= link_to "Top", root_path, id: "link" %>
-        </div>
-        <div class="header-right">
-          <%= link_to "ユーザー一覧", "/user_progates/index", id: "link"%>
-        </div>
-    
-        <div class="header-right">
-          <%= link_to "新規登録", "/signup", id: "link"%>
-        </div>
-     
+      <div class="header-logo">
+        <%= link_to("Expense","/") %>
+      </div>
+      <ul class="header-menus">
+        <% if session[:user_id] %>
+          <li>
+            現在ログインしているユーザーのID：
+            <%= session[:user_id] %>
+          </li>
+          <li>
+            <%= link_to "支出一覧","/index" %>
+          </li>
+          <li>
+            <%= link_to "ユーザー一覧", "/user_progates/index" %>
+          </li>
+          <li>
+            <%= link_to "ログアウト", "/logout", {method: :post} %>
+          </li>
+          <li>
+            <%= form_tag("/posts/create") do %>     
+              <input  type="text" name="content" placeholder="何に">
+              <input  type="number" name="amount" placeholder="いくら">
+              <input type="submit" value="記録" >
+            <% end %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to "新規登録", "/signup" %>
+          </li>
+          <li>
+            <%= link_to "ログイン", "/login" %>
+          </li>
+        <% end %>
+      </ul>
     </header>
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+  
     <%= yield %>
   </body>
 </html>
