@@ -20,6 +20,10 @@
   color: #ddd;
   font-size: 20px;
   z-index: 5;
+  @media(max-width: 1000px) {
+    bottom: 1000px;
+  }
+  
 }
 
 .main {
@@ -40,20 +44,33 @@
   margin-left: 350px;
 }
 .container {
-  
   height: 700px;
   overflow: scroll;
   border: 1px solid gray;
   font-weight: "normal";
   width: auto;
-  
 }
 .posts-index-item {
   padding: 20px 30px;
   background-color: white;
   overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
   position: relative;
+  border-bottom: 1px solid black;
+  p {
+    font-size: 13px;
+  }
+  a {
+    color: black;
+    cursor: pointer;
+    background-color: #EEEEEE;
+    border-radius: 8px;
+    margin-left: 5px;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    text-decoration: none;
+    border: 1px solid black;
+  }
 }
 
 .post-left img {
@@ -144,3 +161,9 @@
   font-size: 24px;
   opacity: 0.5;
 }
+
+.form-error {
+  color: red;
+}
+
+
