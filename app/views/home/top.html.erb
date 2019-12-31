@@ -1,48 +1,21 @@
-<div class="back">
-  <div class="question" id="login-show">
-    あなたは今日何にいくら使いましたか？
-    <button id="btn" type="buntton" >
+  <div class="back">
+    <%# <div class="register">
+    <button id="register-btn" type="buntton" >
       <p id="register">
-      記録する
+        記録する
       </p>
     </button>
   </div>
-  
   <div class="login-modal-wrapper" id="login-modal">
     <div class="modal">
       <div class="close-modal">
         <i class="fa fa-2x fa-times"></i>
       </div>
-      <%= form_tag("/posts/create") do %>
-        <div id="login-form">
-          <h2>記録する</h2>
-          <form action="#">
-            <input class="form-control" type="text" name="content" id="test1" placeholder="何に">
-            <input class="form-control" type="number" name="amount" placeholder="いくら">
-            <input type="submit" value="記録" id="submit-btn">
-        </form>
-      <% end %>
-      </div>
+     
+      
     </div>
-  </div>
-  <div class="login-modal-wrapper" id="amount-modal">
-    <div class="modal2">
-      <div class="close-modal">
-        <i class="fa fa-2x fa-times"></i>
-      </div>
-      <p id="amount">
-      <%= @total.to_s(:delimited) %>円です
-      </p>
-    </div>
-  </div>
-  <div class="total">
-    これまでの合計金額は・・・・・・
-    <button id="hide" type="buntton" >
-      <p id="push">
-      Push Me
-      </p>
-    </button>  
-  </div>
+  </div> %>
+  
 </div>
 
 
