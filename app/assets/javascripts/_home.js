@@ -23,13 +23,13 @@ $(function() {
 
   });
 
-  $(".main").on("mouseover", ".posts-index-item", function(){
-    $(this).css({"background-color": "deepskyblue", "font-weight": "bold"});
-  }).on("mouseout", ".posts-index-item", function(){
-    $(this).css({"background-color": "#FFFFFF", "font-weight": "normal"});
-  })
+  // $(".main").on("mouseover", ".posts-index-item", function(){
+  //   $(this).css({"font-weight": "bold"});
+  // }).on("mouseout", ".posts-index-item", function(){
+  //   $(this).css({"font-weight": "normal"});
+  // })
 
-  //スクロール
+  
   $(".scroll_arrow").on("click", function(){
     $(".container").animate({scrollTop:0}, 300, "swing");
     return false;
