@@ -7,7 +7,7 @@
               <p class="destroy">
                 <%= link_to '削除', "/posts/#{post.id}", method: :delete, id: "link" %>
               </p>
-              <p class="">
+              <p class="date">
                 <%= post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[post.created_at.wday]})") %>
               </p>
               <p>
