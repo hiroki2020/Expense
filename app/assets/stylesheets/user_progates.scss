@@ -1,21 +1,13 @@
-/* users/index ================================ */
-.container {
-  margin-top: 100px;
-}
 .users-heading {
-  font-weight: 300;
-  font-size: 48px;
-  color: #bcc8d4;
-  background-color: whitesmoke;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid gray;
 }
-
 .users-index-item {
-  padding: 20px 30px;
-  background-color: whitesmoke;
-  overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
+  padding: 20px 0;
   display: table;
   width: 100%;
+  border-bottom: 1px dashed gray;
 }
 
 .user-left img {
@@ -39,13 +31,7 @@
   width: 10%;
 }
 
-.user-right {
-  width: 90%;
-  padding-left: 25px;
-  text-align: left;
-  display: table-cell;
-  vertical-align: middle;
-}
+
 
 /* users/show ================================ */
 .user-show {
@@ -53,7 +39,9 @@
 }
 
 .user {
-  margin-bottom: 20px;
+  padding: 20px;
+  width: 40%;
+  margin-left: 90px;
 }
 
 .user img {
@@ -117,3 +105,10 @@
 .users-form input {
   margin-bottom: 15px;
 }
+.form {
+  text-align: left; 
+}
+.form-body {
+  border-bottom: 1px solid gray;
+}
+
