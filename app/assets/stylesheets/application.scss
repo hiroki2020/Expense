@@ -14,32 +14,4 @@
  *= require_self
  */
  @import "./reset";
- header {
-   height: 100px;
-   background-color: lavender;
-   .header-menus {
-     display: flex;
-     justify-content: space-between;
-   }
-   .header-left {
-     float: left;
-     margin: 10px 0 0 10px;
-   }
-   .header-right {
-     float: right;
-     margin: 10px 10px 0 0;
-     list-style: none;
-   }
-   #link {
-    cursor: pointer;
-    background-color: #EEEEEE;
-    border-radius: 8px;
-    padding: 10.5px;  
-    margin-left: 5px;
-    color: black;
-    padding: 5px;
-    font-size: 22px;
-    text-decoration: none;
-    border: 1px solid black;
-  }
- }
+ 
