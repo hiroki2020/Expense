@@ -1,0 +1,23 @@
+<div class="post-item">
+  <div class="container">
+    <div class="post-show">
+      <div class="contents item">
+        <h4>購入者</h4>      
+        <p class="post-name">
+          <%= link_to @user.name , "/user_progates/#{@user.id}" %>
+        </p>
+      <div class="contents item">
+        <h4>購入品</h4>      
+        <p><%=@post.content %></p>
+      </div>
+      <div class="contents date">
+        <h4>購入日</h4>
+        <p><%= @post.created_at.strftime("%Y/%m/%d(#{%w(日 月 火 水 木 金 土)[@post.created_at.wday]})") %></p>
+      </div>
+      <div class="contents amount">
+        <h4>金額</h4>
+        <p>¥<%=@post.amount.to_s(:delimited) %></p>
+      </div>
+    </div>
+  </div>
+</div>
