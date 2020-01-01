@@ -36,6 +36,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+    @user = UserProgate.find_by(id: @post.user_progate_id)
   end
 
 end
