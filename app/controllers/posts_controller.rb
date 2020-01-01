@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
   def index
-    @posts = Post.all.order("created_at DESC")
+    @posts = Post.where(user_progate_id: @current_user.id).order("created_at DESC")
   end
 
   def new

@@ -6,16 +6,6 @@
       <% if @user.id == @current_user.id %>
         <%= link_to "編集", "/user_progates/#{@user.id}/edit"%>
       <% end %>
-        <div class="user-index-item">
-          <% @posts.each do |post|%>
-            <div class="mypost-content">
-              <p>
-                <%= post.content %>
-              </p>
-              <%= link_to '削除', "/posts/#{post.id}", method: :delete %>
-            </div>
-          <% end %>
-        </div>
     </div>
   </div>
 </div>

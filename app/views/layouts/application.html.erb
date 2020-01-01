@@ -11,19 +11,19 @@
   <body>
     <header>
       <div class="header-logo">
-      <li>
-        <% unless @current_user %>
-          <%= link_to("Expense","/") %>
-        <% end %>
-      </li>
-      <li>
-        <%= link_to "支出を記録する", "/posts/new" %>
-      </li>
+        <li>
+          <% unless @current_user %>
+            <%= link_to("Expense","/") %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to(@current_user.name, "/user_progates/#{@current_user.id}") %>
+        </li>
       </div>
       <ul class="header-menus">
         <% if @current_user %>
           <li>
-            <%= link_to(@current_user.name, "/user_progates/#{@current_user.id}") %>
+            <%= link_to "支出を記録する", "/posts/new" %>
           </li>
           <li>
             <%= link_to "支出一覧","/index" %>
