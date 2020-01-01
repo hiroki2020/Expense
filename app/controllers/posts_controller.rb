@@ -39,4 +39,9 @@ class PostsController < ApplicationController
     @user = UserProgate.find_by(id: @post.user_progate_id)
   end
 
+  def amount
+    @amount = Post.where(user_progate_id: @current_user.id)
+    @total = @amount.sum(:amount)
+  end
+
 end

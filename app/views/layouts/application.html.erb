@@ -11,11 +11,14 @@
   <body>
     <header>
       <div class="header-logo">
-        <% if @current_user %>
-          <%= link_to("Expense","/index") %>
-        <% else %>
+      <li>
+        <% unless @current_user %>
           <%= link_to("Expense","/") %>
         <% end %>
+      </li>
+      <li>
+        <%= link_to "支出を記録する", "/posts/new" %>
+      </li>
       </div>
       <ul class="header-menus">
         <% if @current_user %>
@@ -26,13 +29,10 @@
             <%= link_to "支出一覧","/index" %>
           </li>
           <li>
-            <%= link_to "ユーザー一覧", "/user_progates/index" %>
+            <%= link_to "今月の合計","/amount" %>
           </li>
           <li>
             <%= link_to "ログアウト", "/logout", {method: :post} %>
-          </li>
-          <li>
-            <%= link_to "支出を記録する", "/posts/new" %>
           </li>
         <% else %>
           <li>
@@ -50,7 +50,7 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
-    
+
     <%= yield %>
   </body>
 </html>

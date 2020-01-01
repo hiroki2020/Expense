@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  get "/amount" => "posts#amount"
   post "/logout" => "user_progates#logout"
   post "/login" => "user_progates#login"
   get "/login" => "user_progates#login_form"
