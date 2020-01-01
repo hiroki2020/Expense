@@ -18,6 +18,10 @@
  a {
   text-decoration: none;
   font-size: 18px;
+  @media(max-width: 1000px) {
+    font-size: 28px;
+    margin: 4px;
+  }
 }
 
 header {
