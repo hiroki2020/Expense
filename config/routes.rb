@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
   get "/amount" => "posts#amount"
   post "/logout" => "user_progates#logout"
   post "/login" => "user_progates#login"
@@ -10,7 +7,7 @@ Rails.application.routes.draw do
   get "user_progates/:id/edit" => "user_progates#edit"
   post "user_progates/create" => "user_progates#create"
   get "signup" => "user_progates#new"
-  get 'posts/index' 
+  get 'posts/index' => "posts#index"
   get "user_progates/index" => "user_progates#index"
   get "user_progates/:id" => "user_progates#show"
   root "home#top"
