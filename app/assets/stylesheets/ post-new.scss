@@ -1,0 +1,15 @@
+.main-post-new {
+  height: 80px;
+  background-color: white;
+  .create {
+    height: 100%;
+    form {
+      margin-top: 320px;
+      margin-left: 490px;
+      @media(max-width: 1000px) {
+        margin-top: 220px;
+        margin-left: 290px;
+      }
+    }
+  }
+}

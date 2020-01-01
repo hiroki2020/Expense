@@ -32,12 +32,7 @@
             <%= link_to "ログアウト", "/logout", {method: :post} %>
           </li>
           <li>
-            <%# <%= link_to "支出を記録する", "posts/new" %>
-            <%= form_tag("/posts/create") do %>     
-              <input  type="text" name="content" placeholder="何に">
-              <input  type="number" name="amount" placeholder="いくら">
-              <input type="submit" value="記録" >
-            <% end %>
+            <%= link_to "支出を記録する", "/posts/new" %>
           </li>
         <% else %>
           <li>
@@ -55,6 +50,7 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
+    
     <%= yield %>
   </body>
 </html>
