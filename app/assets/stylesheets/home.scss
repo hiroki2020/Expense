@@ -26,6 +26,12 @@
   left: 240px;
   margin: 100px 250px;
   border: 1px solid gray;
+  @media(max-width: 1000px) {
+    top: 70px;
+    width: 36%;
+    left: 60px;
+    margin: 100px 250px;
+  }
   .user-right {
     width: 90%;
     padding-left: 12px;
