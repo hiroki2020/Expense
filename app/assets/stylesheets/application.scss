@@ -19,8 +19,8 @@
   text-decoration: none;
   font-size: 18px;
   @media(max-width: 1000px) {
-    font-size: 28px;
-    margin: 4px;
+    font-size: 25px;
+    margin: 10px;
   }
 }
 
@@ -32,6 +32,11 @@ header {
     padding-left: 20px;
     line-height: 64px;
     float: left;
+    a {
+      @media(max-width: 1000px){
+        font-size: 30px;
+      }
+    }
   }
   .header-menus {
     float: right;
