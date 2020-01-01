@@ -1,0 +1,26 @@
+.index-container {
+  // border-bottom: none;
+  width: 100%;
+}
+.posts-index-item {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-bottom: 1px dashed gray;
+  p {
+    font-size: 13px;
+  }
+  a {
+    color: black;
+    cursor: pointer;
+    background-color: #EEEEEE;
+    margin-left: 5px;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    text-decoration: none;
+  }
+  #show {
+    font-size: 30px;
+  }
+}
