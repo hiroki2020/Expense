@@ -1,10 +1,13 @@
 class UserProgatesController < ApplicationController
+  before_action :authenticate_user,{only:[:index, :show, :edit, :update]}
+  before_action :ensure_correct_user, {only: [:edit, :update]}
   def index
     @users = UserProgate.all
   end
 
   def show
     @user = UserProgate.find_by(id: params[:id])
+    @posts = Post.where(user_progate_id: @user.id)
   end
 
   def new
@@ -12,8 +15,13 @@ class UserProgatesController < ApplicationController
   end
 
   def create
-    @user = UserProgate.new(name: params[:user_name], email: params[:user_email], password: params[:user_password])
+    @user = UserProgate.new(
+      name: params[:name],
+      email: params[:email], 
+      password: params[:password]
+    )
     if @user.save
+      session[:user_progate_id] = @user.id
       redirect_to("/user_progates/#{@user.id}")
       flash[:notice] = "登録が完了しました！"
     else
@@ -46,7 +54,7 @@ class UserProgatesController < ApplicationController
                                 password: params[:password])
     if @user
       flash[:notice] = "ログインしました"
-      session[:user_id] = @user.id
+      session[:user_progate_id] = @user.id
       redirect_to("/index")
     else
       @error_message = "メールアドレスまたはパスワードが間違っています"
@@ -57,12 +65,16 @@ class UserProgatesController < ApplicationController
   end
 
   def logout
-    session[:user_id] = nil
+    session[:user_progate_id] = nil
     flash[:notice] = "ログアウトが完了しました"
     redirect_to("/login")
   end
 
-  
-
+  def ensure_correct_user
+    if @current_user.id != params[:id].to_i
+      flash[:notice] = "権限がありません"
+      redirect_to("/index")
+    end
+  end
   
 end
