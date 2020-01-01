@@ -5,6 +5,12 @@
   left: 240px;
   margin: 100px 290px;
   border: 1px solid gray;
+  @media(max-width: 1000px) {
+    margin: 300px 280px;
+    width: 36%;
+    top: 10px;
+    left: 0px;
+  }
   .user-right {
     width: 90%;
     padding-left: 12px;
