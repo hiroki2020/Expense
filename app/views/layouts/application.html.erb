@@ -11,14 +11,16 @@
   <body>
     <header>
       <div class="header-logo">
-        <li>
-          <% unless @current_user %>
+        <% if @current_user == nil %>
+          <li>
             <%= link_to("Expense","/") %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to(@current_user.name, "/user_progates/#{@current_user.id}") %>
-        </li>
+          </li>
+        <% end %>
+        <% if @current_user %>
+          <li>
+            <%= link_to(@current_user.name, "/user_progates/#{@current_user.id}") %>
+          </li>
+        <% end %>
       </div>
       <ul class="header-menus">
         <% if @current_user %>
