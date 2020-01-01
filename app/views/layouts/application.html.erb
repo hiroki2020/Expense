@@ -3,7 +3,6 @@
   <head>
     <title>Expense</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -12,13 +11,16 @@
   <body>
     <header>
       <div class="header-logo">
-        <%= link_to("Expense","/") %>
+        <% if @current_user %>
+          <%= link_to("Expense","/index") %>
+        <% else %>
+          <%= link_to("Expense","/") %>
+        <% end %>
       </div>
       <ul class="header-menus">
-        <% if session[:user_id] %>
+        <% if @current_user %>
           <li>
-            現在ログインしているユーザーのID：
-            <%= session[:user_id] %>
+            <%= link_to(@current_user.name, "/user_progates/#{@current_user.id}") %>
           </li>
           <li>
             <%= link_to "支出一覧","/index" %>
@@ -30,6 +32,7 @@
             <%= link_to "ログアウト", "/logout", {method: :post} %>
           </li>
           <li>
+            <%# <%= link_to "支出を記録する", "posts/new" %>
             <%= form_tag("/posts/create") do %>     
               <input  type="text" name="content" placeholder="何に">
               <input  type="number" name="amount" placeholder="いくら">
@@ -52,7 +55,6 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
-  
     <%= yield %>
   </body>
 </html>
