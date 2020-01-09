@@ -6,6 +6,11 @@
   margin: 100px 250px;
   border: 1px solid gray;
   text-align: center;
+  @media(max-width: 1000px) {
+    width: 26%;
+    left: 310px;
+    margin: 300px 50px;
+  }
   .form-heading {
     border-bottom: 1px dashed gray;
     padding: 10px 0; 
