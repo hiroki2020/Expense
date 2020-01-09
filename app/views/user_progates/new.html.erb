@@ -4,8 +4,6 @@
     <div class="form users-form">
       <div class="form-body">
       <%= form_tag("/user_progates/create") do %>
-        <p>プロフィール画像</p>
-        <input type="file" name="image">
         <p>ユーザー名</p>
         <input name="name" value="<%= @user.name %>">
         <p>メールアドレス</p>
