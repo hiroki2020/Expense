@@ -18,6 +18,9 @@
         <% end %>
         <% if @current_user %>
           <li>
+            <img src="<%= "/user_images/#{@current_user.image_name}" %>">
+          </li>
+          <li>
             <%= link_to(@current_user.name, "/user_progates/#{@current_user.id}") %>
           </li>
         <% end %>

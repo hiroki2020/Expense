@@ -36,9 +36,13 @@ header {
     @media(max-width: 1000px) {
       margin-top: 100px;
     }
+    img {
+      height: 70px;
+      width: 70px;
+      margin-top: 3px;
+    }
   }
   .header-logo {
-    padding-left: 20px;
     line-height: 64px;
     float: left;
     a {

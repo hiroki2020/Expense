@@ -1,6 +1,7 @@
 class UserProgatesController < ApplicationController
   before_action :authenticate_user,{only:[:index, :show, :edit, :update]}
   before_action :ensure_correct_user, {only: [:edit, :update]}
+
   def index
     @users = UserProgate.all
   end
@@ -18,7 +19,8 @@ class UserProgatesController < ApplicationController
     @user = UserProgate.new(
       name: params[:name],
       email: params[:email], 
-      password: params[:password]
+      password: params[:password],
+      image_name: "no_image.png" 
     )
     if @user.save
       session[:user_progate_id] = @user.id
@@ -38,6 +40,11 @@ class UserProgatesController < ApplicationController
     @user.name = params[:user_name]
     @user.email = params[:user_email]
     @user.password = params[:user_password]
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    end
     if @user.save
       redirect_to "/user_progates/#{@user.id}"
       flash[:notice] = "ユーザー情報を編集しました。"
@@ -76,5 +83,6 @@ class UserProgatesController < ApplicationController
       redirect_to("/index")
     end
   end
+
   
 end
