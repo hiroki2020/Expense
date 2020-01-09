@@ -20,7 +20,7 @@ class UserProgatesController < ApplicationController
       name: params[:name],
       email: params[:email], 
       password: params[:password],
-      image_name: "default_user.png" 
+      image_name: "no_image.png" 
     )
     if @user.save
       session[:user_progate_id] = @user.id
