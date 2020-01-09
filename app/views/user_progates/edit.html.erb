@@ -3,7 +3,9 @@
     <div class="form-heading">ユーザー情報の編集</div>
     <div class="form users-form">
       <div class="form-body-edit">
-        <%= form_tag("/user_progates/#{@user.id}/update") do %>
+        <%= form_tag("/user_progates/#{@user.id}/update", {multipart: true}) do %>
+          <p>画像</p>
+          <input type="file" name="image">
           <p>ユーザー名</p>
           <input value="<%= @user.name %>" name="user_name">
           <p>メールアドレス</p>
