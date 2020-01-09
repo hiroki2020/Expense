@@ -1,6 +1,7 @@
 class UserProgatesController < ApplicationController
   before_action :authenticate_user,{only:[:index, :show, :edit, :update]}
   before_action :ensure_correct_user, {only: [:edit, :update]}
+
   def index
     @users = UserProgate.all
   end
@@ -18,7 +19,8 @@ class UserProgatesController < ApplicationController
     @user = UserProgate.new(
       name: params[:name],
       email: params[:email], 
-      password: params[:password]
+      password: params[:password],
+      image_name: "default_user.png" 
     )
     if @user.save
       session[:user_progate_id] = @user.id
@@ -76,5 +78,6 @@ class UserProgatesController < ApplicationController
       redirect_to("/index")
     end
   end
+
   
 end
