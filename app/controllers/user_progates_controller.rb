@@ -40,6 +40,11 @@ class UserProgatesController < ApplicationController
     @user.name = params[:user_name]
     @user.email = params[:user_email]
     @user.password = params[:user_password]
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    end
     if @user.save
       redirect_to "/user_progates/#{@user.id}"
       flash[:notice] = "ユーザー情報を編集しました。"
